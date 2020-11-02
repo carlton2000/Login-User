@@ -1,39 +1,58 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    <center>
+    <div class="ui card">
+      
+  <div class="content">
+    <div class="header">Register Account</div>
+  </div>
+  <div class="content">
+    <div class="ui small feed">
+      <div class="event">
+        <div class="content">
+          <form class="ui form">
+              <div class="field">
+                <label>First Name</label>
+                <input type="text" name="first-name" placeholder="First Name">
+              </div>
+              <div class="field">
+                <label>Last Name</label>
+                <input type="text" name="last-name" placeholder="Last Name">
+              </div>
+              <div class="field">
+                <label>Date of Birth</label>
+                <input type="text" name="last-name" placeholder="Last Name">
+              </div>
+              <div class="field">
+                <label>Email:</label>
+                <input type="text" name="last-name" placeholder="Last Name">
+              </div>
+              <div class="field">
+                <div class="ui checkbox">
+                  <input type="checkbox" tabindex="0" class="hidden">
+                  <label>I agree to the Terms and Conditions</label>
+                </div>
+              </div>
+              <button class="ui button" type="submit">Sign Up</button>
+            </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="extra content">
+    <button class="ui button">Join Project</button>
+  </div>
+      
+</div>
+</center>
   </div>
 </template>
 
 <script>
 export default {
   name: 'HelloWorld',
-  props: {
+  props: { 
     msg: String
   }
 }
@@ -41,18 +60,22 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
+ /* .devider {
+  height: 100vh;
+  margin: 0;
   padding: 0;
+}  */
+.column{
+  height: 75vh;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+.ui .card{
+  padding: 20px;
+  width: 500px;
 }
-a {
-  color: #42b983;
+.buttons{
+  padding: 50px;
+}
+.hello{
+  align-content: center;
 }
 </style>
