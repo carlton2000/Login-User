@@ -33,16 +33,18 @@
                   <label>I agree to the Terms and Conditions</label>
                 </div>
               </div>
-              <button class="ui button" type="submit">Sign Up</button>
+             <router-link to="/user">
+                <button class="ui button" type="submit">Sign Up</button>
+             </router-link>
             </form>
         </div>
       </div>
 
     </div>
   </div>
-  <div class="extra content">
+  <!-- <div class="extra content">
     <button class="ui button">Join Project</button>
-  </div>
+  </div> -->
       
 </div>
 </center>
@@ -60,11 +62,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
- /* .devider {
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-}  */
 .column{
   height: 75vh;
 }

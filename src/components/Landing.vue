@@ -13,9 +13,9 @@
                 <div class="buttons">
                   <h3 >Register now...</h3> 
                   <h3 >Free Trial for 30 days</h3>
-                  <a href="/log">
-                  <button class="ui toggle button">Sign Up</button>
-                  </a>
+                  <router-link to="/log">
+                    <button class="ui toggle button">Sign Up</button>
+                  </router-link>
                 </div>
               </div>
               <!-- <div class="extra content">
@@ -29,8 +29,8 @@
     <div class="column">
       <h1>Welcome Back !</h1>        <form class="ui form">
           <div class="field">
-            <label>Name:</label>
-            <input type="text" name="first-name" placeholder="First Name">
+            <label>Username:</label>
+            <input type="text" name="first-name" placeholder="User">
           </div>
           <div class="field">
             <label>Email:</label>
@@ -45,8 +45,10 @@
               <input type="checkbox" tabindex="0" class="hidden">
               <label>I agree to the Terms and Conditions</label>
             </div>
-          </div>  
-          <button class="ui button" type="submit">Sign In</button>
+          </div> 
+          <router-link to="/user">
+              <button v-on:click="say('Please wait while your information is being processed')" class="ui button" type="submit">Sign In</button>
+          </router-link>
         </form>
     </div>
   </div>
@@ -57,9 +59,13 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
   props: { 
     msg: String
+  },
+  methods:{
+    say:function(message){
+      alert(message)
+}
   }
 }
 </script>
@@ -67,7 +73,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .hello {
-  padding: 100px;
+  padding: 150px;
 }
 
 .head{
