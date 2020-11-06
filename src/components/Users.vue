@@ -52,7 +52,7 @@
         </div>
         </div>
         <router-link to="/">
-        <button v-on:click="says('Confirm Logging Out')" class="ui inverted secondary button" id="flot">Log Out</button>
+        <button v-on:click="says('Confirm Logging Out')" @click="LogOut" class="ui inverted secondary button" id="flot">Log Out</button>
         </router-link>
                 
     </center>
@@ -74,13 +74,13 @@ export default {
             let URL = "https://keepers-contact.herokuapp.com/api/contact";
             let _data = this.add;
             // console.log("add", this.add)
-            let token = window.localStorage.getItem('token');
+            // let token = window.localStorage.getItem('token');
             fetch(URL, {
                 method:"POST",
                 body:  JSON.stringify(_data),
                 headers: {
                     "Content-type": "application/json",
-                    "x-auth-token": token
+                    // "x-auth-token": token
                 }
             })
             .then(response => response.json())
@@ -150,7 +150,26 @@ export default {
           this.edit = true;
           this.add = data;
           console.log(JSON.stringify(this.add));
-      }
+      },
+            LogOut() {
+            let URL = "https://keepers-contact.herokuapp.com/api/contact";
+            let _data = this.add;
+            // console.log("add", this.add)
+            let token = window.localStorage.getItem('token');
+            fetch(URL, {
+                method:"",
+                body:  JSON.stringify(_data),
+                headers: {
+                    "Content-type": "application/json",
+                    "x-auth-token": token
+                }
+            })
+            .then(response => response.json())
+                .then(json => {   
+                console.log('json->', json);  
+                })
+                .catch(err => console.log('err->',err))
+        }, 
     },
     created() {
       this.handleGetContacts();

@@ -28,9 +28,9 @@
                   <label>I agree to the Terms and Conditions</label>
                 </div>
               </div>
-             <!-- <router-link to="/user"> -->
+             <router-link to="/user">
                 <button type="button" v-on:click="handleRegister" class="ui button">Sign Up</button>
-             <!-- </router-link> -->
+             </router-link>
             </form>
         </div>
       </div>

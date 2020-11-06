@@ -46,9 +46,9 @@
               <label>I agree to the Terms and Conditions</label>
             </div>
           </div> 
-          <!-- <router-link to="/user"> -->
+          <router-link to="/">
               <button type="button" v-on:click="handleLogin" class="ui button" >Sign In</button>
-          <!-- </router-link> -->
+          </router-link>
         </form>
     </div>
   </div>
