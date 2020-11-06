@@ -74,13 +74,13 @@ export default {
             let URL = "https://keepers-contact.herokuapp.com/api/contact";
             let _data = this.add;
             // console.log("add", this.add)
-            // let token = window.localStorage.getItem('token');
+            let token = window.localStorage.getItem('token');
             fetch(URL, {
                 method:"POST",
                 body:  JSON.stringify(_data),
                 headers: {
                     "Content-type": "application/json",
-                    // "x-auth-token": token
+                    "x-auth-token": token
                 }
             })
             .then(response => response.json())
@@ -97,6 +97,7 @@ export default {
                 method:"GET",
                 mode: 'cors',
                 headers: {
+                  "Content-type": "application/json",
                     "x-auth-token": token
                 }
             })
@@ -152,16 +153,16 @@ export default {
           console.log(JSON.stringify(this.add));
       },
             LogOut() {
-            let URL = "https://keepers-contact.herokuapp.com/api/contact";
-            let _data = this.add;
+            // let URL = "https://keepers-contact.herokuapp.com/api/contact";
+            // let _data = this.add;
             // console.log("add", this.add)
-            let token = window.localStorage.getItem('token');
+            // let token = window.localStorage.getItem('token');
             fetch(URL, {
                 method:"",
-                body:  JSON.stringify(_data),
+                // body:  JSON.stringify(_data),
                 headers: {
                     "Content-type": "application/json",
-                    "x-auth-token": token
+                    // "x-auth-token": token
                 }
             })
             .then(response => response.json())

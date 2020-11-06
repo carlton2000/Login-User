@@ -5,6 +5,7 @@ import Routes from './routes';
 import SuiVue from 'semantic-ui-vue';
 import 'semantic-ui-css/semantic.min.css';
 import VueRouter from 'vue-router';
+import './registerServiceWorker'
 
 Vue.use(SuiVue);
 Vue.use(VueRouter);
