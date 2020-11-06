@@ -15,15 +15,15 @@
               <div class="field">
                 <input v-model="add.phone" type="text" name="last-name" placeholder="Phone :">
               </div>
-              <div class="field">
+              <!-- <div class="field">
                 <input v-model="add.type" type="text" name="last-name" placeholder="Type :">
-              </div>
-                <!-- <select v-model="add.type">
+              </div> -->
+                <select v-model="add.type">
                   <option disabled value="">Type :</option>
                   <option>Intern</option>
                   <option>Personal</option>
                   <option>Professional</option>
-                </select> -->
+                </select>
                 <br>
               <br>
               <button v-if="!edit" v-on:click="handleAdd" class="ui button" type="button">Submit</button>
@@ -128,13 +128,12 @@ export default {
             handleUpdateContacts(id){
             let URL = `https://keepers-contact.herokuapp.com/api/contact/${id}`;
             let _data = this.add;
-            console.log(_data);
             let token = window.localStorage.getItem('token');
             fetch(URL, {
               method:"PUT",
               body:  JSON.stringify(_data),
                 headers: {
-                    "Content": "application/json",
+                    "Content-type": "application/json",
                     "x-auth-token": token
                 }
             })
